@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* body::-webkit-scrollbar {
+    width: 9px;
+   } */
+
+  .cat::-webkit-scrollbar {
+    height: 8px;
+    /* box-shadow: inset 0 0 10px; */
+  }
+  .search-bar::-webkit-scrollbar {
+    height: 8px;
+    /* box-shadow: inset 0 0 10px; */
+  }
+
+  /* //////////////////////////////// */
+  /* :root {
+    --swiper-pagination-bullet-size: 4px;
+  } */
+  @media (max-width: 1000px) {
+    :root {
+      --swiper-pagination-bullet-size: 8px;
+    }
+  }
+  @media (min-width: 1000px) {
+    :root {
+      --swiper-pagination-bullet-size: 11px;
+    }
+  }
+  @media (max-width: 640px) {
+    :root {
+      --swiper-pagination-bullet-size: 6px;
+    }
+  }
+  /* /////////////////////////////// */
+  /* .sliderWrapper { */
+
+  @media (max-width: 400px) {
+    .cat::-webkit-scrollbar {
+      height: 0px;
+      /* box-shadow: inset 0 0 10px; */
+    }
+  }
+  .cat::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgb(57, 61, 68);
+    /* outline: 1px solid rgb(104, 163, 221); */
+  }
+  .fav::-webkit-scrollbar {
+    /* box-shadow: inset 0 0 10px; */
+    width: 9px;
+  }
+  /* .search-bar::-webkit-scrollbar {
+    /* box-shadow: inset 0 0 10px; */
+  /* width:0px; */
+  /* height: 1px; */
+  /* } */
+  .fav::-webkit-scrollbar-thumb {
+    height: 1px;
+    border-radius: 50px;
+    width: 1px;
+    background-color: rgb(77, 85, 90);
+    /* outline: 1px solid rgb(104, 163, 221); */
+  }
+  .colIns {
+    color: rgb(255, 0, 136);
+  }
+  .duration {
+    transition: all 300ms;
+  }
+  .scrollInvisable::-webkit-scrollbar {
+    display: none;
+  }
+  .animSlide {
+    animation-name: apper;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.4, 0.75, 0.2, 1);
+    /* animation-delay: 1s; */
+    transition: all 3 ease;
+  }
+  @keyframes apper {
+    from {
+      transform: translatex(-100%);
+    }
+    to {
+      transform: translatex(0);
+    }
+  }
+  .add {
+    animation: add 1.5s alternate;
+  }
+  .animate-pulse {
+    animation: pulse 1.5s alternate;
+  }
+  @keyframes add {
+    0% {
+      top: -50px;
+      /* transform: translateY(100%); */
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    100% {
+      top: 32px;
+      /* transform: translateY(0); */
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
