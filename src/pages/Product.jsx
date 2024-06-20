@@ -7,7 +7,7 @@ import Category from "./Category";
 import { useEffect, useState } from "react";
 import AdressPage from "../ui/AdressPage";
 import { useLocation, useParams } from "react-router-dom";
-import { IoMdHeart } from "react-icons/io";
+import { IoMdHeart, IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemAsync } from "../features/cartSlice";
 import { Flip, toast } from "react-toastify";
@@ -31,6 +31,7 @@ function Product() {
     name,
     colors,
     fav,
+    stars,
   } = product;
   const dispatch = useDispatch();
   const [showImage, setShowImage] = useState(srcOne);
@@ -97,9 +98,20 @@ function Product() {
         <span className="md:w-6/12 lg:w-5/12 w-[98%] md:mx-0 mx-auto md:mt-0 mt-9 flex flex-col">
           <h2 className="text-2xl font-[700]">{name}</h2>
           <p className="flex text-yellow-600   my-2 text-lg">
-            <FaStar />
-            <FaStar /> <FaStar /> <FaStar /> <FaStarHalfAlt />
-            <p className=" text-stone-400 text-sm ml-1">( 43 Reviews )</p>
+            {Array.apply(null, { length: product.stars }).map((i) => (
+              <span className="busterCards" key={i}>
+                <IoMdStar />
+              </span>
+            ))}
+            {Number((product.stars - Math.trunc(product.stars)).toFixed(2)) ? (
+              <IoMdStarHalf />
+            ) : (
+              ""
+            )}
+
+            <p className=" text-stone-400 text-sm ml-1">
+              ( {product.reviews} )
+            </p>
             <p className="text-stone-500 text-sm ml-3">|</p>
             <span className="text-sm ml-4 text-green-400">In stock</span>
           </p>

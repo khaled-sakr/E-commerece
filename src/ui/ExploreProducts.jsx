@@ -5,7 +5,7 @@ import HintH1 from "./HintH1";
 import MoreHome from "./MoreHome";
 import { CiHeart } from "react-icons/ci";
 
-import { IoMdHeart, IoMdStar } from "react-icons/io";
+import { IoMdHeart, IoMdStar, IoMdStarHalf } from "react-icons/io";
 import HintHome from "./HintHome";
 import { addItemFav, deleteItemFav } from "../features/favSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -131,14 +131,23 @@ function ExploreProducts() {
                       </span>
 
                       <span className="flex text-yellow-500 text-xl ml-2 mt-1">
-                        <IoMdStar className="" />
-                        <IoMdStar className="" />
-                        <IoMdStar className="" />
-                        <IoMdStar className="" />
-                        <IoMdStar className="" />
+                        {Array.apply(null, { length: product.stars }).map(
+                          (i) => (
+                            <span className="busterCards" key={i}>
+                              <IoMdStar />
+                            </span>
+                          )
+                        )}
+                        {Number(
+                          (product.stars - Math.trunc(product.stars)).toFixed(2)
+                        ) ? (
+                          <IoMdStarHalf />
+                        ) : (
+                          ""
+                        )}
 
                         <span className="text-slate-400 text-sm ml-2">
-                          (54)
+                          ( {product.reviews} )
                         </span>
                       </span>
                     </span>

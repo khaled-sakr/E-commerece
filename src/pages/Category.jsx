@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CiHeart } from "react-icons/ci";
-import { IoMdHeart, IoMdStar } from "react-icons/io";
+import { IoMdHeart, IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { Link, useParams } from "react-router-dom";
 import AdressPage from "../ui/AdressPage";
 import { useConFast } from "../Context/ContextProject";
@@ -75,13 +75,22 @@ function Category({ withHint = true, anotherHint = false }) {
                 </span>
 
                 <span className="flex text-yellow-500 text-xl ml-2 mt-1 ">
-                  <IoMdStar className="" />
-                  <IoMdStar className="" />
-                  <IoMdStar className="" />
-                  <IoMdStar className="" />
-                  <IoMdStar className="" />
+                  {Array.apply(null, { length: product.stars }).map((i) => (
+                    <span className="busterCards" key={i}>
+                      <IoMdStar />
+                    </span>
+                  ))}
+                  {Number(
+                    (product.stars - Math.trunc(product.stars)).toFixed(2)
+                  ) ? (
+                    <IoMdStarHalf />
+                  ) : (
+                    ""
+                  )}
 
-                  <span className="text-slate-400 text-sm ml-2">(54)</span>
+                  <span className="text-slate-400 text-sm ml-2">
+                    ( {product.reviews} )
+                  </span>
                 </span>
               </span>
             </div>

@@ -7,7 +7,7 @@ import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
-import { IoMdHeart, IoMdStar } from "react-icons/io";
+import { IoMdHeart, IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { MdStarBorder } from "react-icons/md";
 import { useConFast } from "../Context/ContextProject";
 import { addItemFav, deleteItemFav } from "../features/favSlice";
@@ -125,13 +125,23 @@ function CategoriesInShop({ type, categoryId }) {
                       </span>
 
                       <span className="flex text-yellow-500 text-xl ml-2 mt-1">
-                        <IoMdStar />
-                        <IoMdStar />
-                        <IoMdStar />
-                        <IoMdStar />
-                        <IoMdStar />
+                        {Array.apply(null, { length: product.stars }).map(
+                          (i) => (
+                            <span className="busterCards" key={i}>
+                              <IoMdStar />
+                            </span>
+                          )
+                        )}
+                        {Number(
+                          (product.stars - Math.trunc(product.stars)).toFixed(2)
+                        ) ? (
+                          <IoMdStarHalf />
+                        ) : (
+                          ""
+                        )}
+
                         <span className="text-slate-400 text-sm ml-2">
-                          (54)
+                          ( {product.reviews} )
                         </span>
                       </span>
                     </span>
