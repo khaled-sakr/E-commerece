@@ -1,13 +1,10 @@
 import { IoMdStar } from "react-icons/io";
-import { BsBagHeart } from "react-icons/bs";
 import { TbShoppingCartHeart } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { GiShoppingBag, GiShoppingCart } from "react-icons/gi";
-import { MdDeleteForever, MdOutlineDeleteForever } from "react-icons/md";
+import { GiShoppingCart } from "react-icons/gi";
+import { MdOutlineDeleteForever } from "react-icons/md";
 import AdressPage from "../ui/AdressPage";
-import { useConFast } from "../Context/ContextProject";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemAsync } from "../features/cartSlice";
 import { Flip, toast } from "react-toastify";
 import { deleteItemFav } from "../features/favSlice";
 function Favourite() {

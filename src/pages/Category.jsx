@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { IoMdHeart, IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { Link, useParams } from "react-router-dom";
 import AdressPage from "../ui/AdressPage";
-import { useConFast } from "../Context/ContextProject";
 import HintHome from "../ui/HintHome";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemFav, deleteItemFav } from "../features/favSlice";
@@ -70,7 +68,7 @@ function Category({ withHint = true, anotherHint = false }) {
                 <span className="block text-base text-start font-[500] ml-3 mb-1">
                   {product.name}
                 </span>
-                <span className="text-red-400 text-sm font-[500] sm:ml-3 start">
+                <span className="text-red-400 text-sm font-[500] sm:ml-3 ml-2 start">
                   ${product.price - product.price * (product.discount / 100)}
                 </span>
 

@@ -1,8 +1,5 @@
-import { CiMail, CiPhone } from "react-icons/ci";
-import { FiMail, FiPhone } from "react-icons/fi";
-import { MdOutlineLocalPhone, MdOutlineMail } from "react-icons/md";
+import { CiMail } from "react-icons/ci";
 import { SlPhone } from "react-icons/sl";
-import { Link } from "react-router-dom";
 import AdressPage from "../ui/AdressPage";
 function Contact() {
   return (

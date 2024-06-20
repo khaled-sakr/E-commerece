@@ -1,6 +1,5 @@
 import { FaPlus, FaStar } from "react-icons/fa6";
 import { GiReturnArrow } from "react-icons/gi";
-import { FaStarHalfAlt } from "react-icons/fa";
 import { FiMinus } from "react-icons/fi";
 import { PiVan } from "react-icons/pi";
 import Category from "./Category";

@@ -21,13 +21,13 @@ function ExploreThisCat() {
       </span>
       <img
         className="w-full h-full sm:inline hidden"
-        src="..\public\images\Annotation 2024-02-28 022401.png"
-        alt="palastine.png"
+        src="..\images\Annotation 2024-02-28 022401.jpg"
+        alt="palastene.jpg"
       />
       <img
         className="w-full h-full inline sm:hidden"
-        src="..\public\images\Annotation 2024-02-26 214705.png"
-        alt="palastine.png"
+        src="..\images\Annotation 2024-02-26 214705.jpg"
+        alt="palastine.jpg"
       />
     </div>
   );

@@ -1,15 +1,9 @@
 import Carousel from "react-multi-carousel";
 import HintH1 from "./HintH1";
-import HintHome from "./HintHome";
 import MoreHome from "./MoreHome";
-import ProductHomeFlash from "./ProductHomeFlash";
 import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { FaHeart } from "react-icons/fa";
 import { IoMdHeart, IoMdStar, IoMdStarHalf } from "react-icons/io";
-import { MdStarBorder } from "react-icons/md";
-import { useConFast } from "../Context/ContextProject";
 import { addItemFav, deleteItemFav } from "../features/favSlice";
 import { useDispatch, useSelector } from "react-redux";
 

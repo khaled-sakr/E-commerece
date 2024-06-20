@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import AboutUs from "./AboutUs";
 import Header from "./Header";
 import { useConFast } from "../Context/ContextProject";
+import Scrollup from "./Scrollup";
 
 function Applayout() {
   const { authed } = useConFast();
@@ -11,6 +12,7 @@ function Applayout() {
     "
     >
       <Header authed={authed} />
+      <Scrollup />
       <Outlet />
       <AboutUs />
     </div>

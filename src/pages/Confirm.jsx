@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FlashSales from "../ui/FlashSales";
 import { useDispatch, useSelector } from "react-redux";
 import { RiMailSendLine } from "react-icons/ri";
@@ -6,7 +6,6 @@ import { GiPositionMarker } from "react-icons/gi";
 import { BiPhone } from "react-icons/bi";
 import { GrSchedule } from "react-icons/gr";
 import { clearOrder, resetCoupon } from "../features/cartSlice";
-import { useEffect } from "react";
 import { CiMoneyBill } from "react-icons/ci";
 
 function Confirm() {

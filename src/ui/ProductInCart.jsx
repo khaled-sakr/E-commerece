@@ -18,7 +18,7 @@ function ProductInCart({ product }) {
         />
         <Link
           to={`/category/${product.categoryId}/product/${product.id}`}
-          className="lg:text-sm xs:text-xs text-[10px] relative after:absolute after:w-0 after:duration-300 hover:after:w-full after:h-[1px] after:left-0 after:bg-black after:top-5 cursor-pointer"
+          className="lg:text-xs xs:text-[10px] text-[8px] relative after:absolute after:w-0 after:duration-300 hover:after:w-full after:h-[1px] after:left-0 after:bg-black after:top-5 cursor-pointer"
         >
           {product.name},{product.color},{product.size}
         </Link>

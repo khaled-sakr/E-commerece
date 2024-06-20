@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";

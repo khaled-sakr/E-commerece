@@ -189,7 +189,7 @@ function Checkout() {
             {cart.map((product) => (
               <div className="h-12 hover:bg-ston e-100 flex justify-between font-semibold ">
                 <img
-                  src="/images/88A5E863-E59A-4034-A576-F33A9A71B036.webp"
+                  src={product.srcOne}
                   alt="t-shirt"
                   className="h-full mr-2"
                 />
@@ -255,10 +255,10 @@ function Checkout() {
 
               <span className="h-2/5 flex gap-2">
                 <img
-                  src="..\public\images\visa-and-mastercard-logo-26.png"
-                  alt=""
+                  src="..\images\visa-and-mastercard-logo-26.jpg"
+                  alt="visa.jpg"
                   className="h-full"
-                />{" "}
+                />
               </span>
             </span>{" "}
             <span className="flex sm:h-12 h-8  justify-between">

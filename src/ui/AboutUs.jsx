@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import ContactUs from "./ContactUs";
-import MessageFooter from "./MessageFooter";
 import { useConFast } from "../Context/ContextProject";
 import { LuSendHorizonal } from "react-icons/lu";
 import {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useConFast } from "../Context/ContextProject";
 import { Link, useNavigate } from "react-router-dom";
 import { Flip, toast } from "react-toastify";
@@ -61,8 +60,8 @@ function Login() {
     <>
       <div className="flex h-full w-[99%] lg:flex-row flex-col justify-evenly m-auto md:mt-6 mt-4">
         <img
-          src="..\public\images\00000000000000000.png"
-          alt="log in"
+          src="..\images\sart_24-04-27_13-02-08-018.jpg"
+          alt="logIn"
           className="lg:w-[40%] sm:w-7/12 xs:w-10/12 w-11/12 m-auto lg:m-0"
         />
         <form
@@ -72,8 +71,10 @@ function Login() {
           <span className="xl:text-3xl text-2xl font-semibold block w-full">
             Log In To Exclusive
           </span>
-          <span className="block my-3  w-full">Enter your details blow</span>
-          <span className="lg:text-2xl sm:text-base text-sm mb-3 block mt-5 w-full">
+          <span className="block mt-3 mb-6 w-full">
+            Enter your details blow
+          </span>
+          <span className="lg:text-2xl sm:text-base text-sm mb-3 block  w-full">
             <input
               {...register("email", {
                 required: true,
