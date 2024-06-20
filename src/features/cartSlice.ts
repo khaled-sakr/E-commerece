@@ -52,7 +52,7 @@ const cartSlice = createSlice({
       state.order = state.cart;
       state.cart = [];
       toast.success(`Your Order had been sumbitted 👌`, {
-        position: "top-center",
+        position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -130,7 +130,7 @@ const cartSlice = createSlice({
           }>
         ) => {
           toast.success(`This product has been added to the Cart`, {
-            position: "top-center",
+            position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -146,24 +146,9 @@ const cartSlice = createSlice({
           cartSlice.caseReducers.calcPrice(state);
         }
       )
-      // .addCase(clearCartAsync.fulfilled, (state) => {
-      //   toast.success(`Your Order had been sumbitted 👌`, {
-      //     position: "top-center",
-      //     autoClose: 3000,
-      //     hideProgressBar: false,
-      //     closeOnClick: true,
-      //     pauseOnHover: true,
-      //     draggable: true,
-      //     progress: undefined,
-      //     theme: "colored",
-      //     transition: Flip,
-      //   });
-      //   state.order = state.cart;
-      //   state.cart = [];
-      // })
       .addCase(applicationCouponAsync.fulfilled, (state) => {
         toast.success(`Coupon had been applyed`, {
-          position: "top-center",
+          position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -186,13 +171,6 @@ export const addItemAsync = createAsyncThunk(
     return cart;
   }
 );
-// export const clearCartAsync = createAsyncThunk(
-//   "cartSlice/clearCartAsync",
-//   async (order: any) => {
-//     await new Promise((resolve) => setTimeout(resolve, 300));
-//     return order;
-//   }
-// );
 export const applicationCouponAsync = createAsyncThunk(
   "cartSlice/applicationCouponAsync",
   async (cart: any) => {

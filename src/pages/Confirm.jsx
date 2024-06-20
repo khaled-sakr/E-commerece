@@ -2,9 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import FlashSales from "../ui/FlashSales";
 import { useDispatch, useSelector } from "react-redux";
 import { RiMailSendLine } from "react-icons/ri";
-// import { BsHouse } from "react-icons/bs";
 import { GiPositionMarker } from "react-icons/gi";
-// import { MdNumbers } from "react-icons/md";
 import { BiPhone } from "react-icons/bi";
 import { GrSchedule } from "react-icons/gr";
 import { clearOrder, resetCoupon } from "../features/cartSlice";
@@ -16,13 +14,6 @@ function Confirm() {
   const cart = useSelector((state) => state.cart.cart);
   const price = useSelector((state) => state.cart.price);
   const dispatch = useDispatch();
-  console.log(order, cart);
-  // const location = useLocation();
-  // useEffect(() => {
-  //   // runs on location, i.e. route, change
-  //   console.log("handle route change here", location);
-  // }, [location]);
-
   return (
     <>
       <div className="flex md:flex-row flex-col sm:w-9/12 w-full mx-auto sm:my-16 my-8">

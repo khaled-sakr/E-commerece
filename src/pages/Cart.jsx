@@ -3,7 +3,6 @@ import AdressPage from "../ui/AdressPage";
 import ProductInCart from "../ui/ProductInCart";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { useDispatch, useSelector } from "react-redux";
-// import { useState } from "react";
 import { applicationCouponAsync } from "../features/cartSlice";
 import { Flip, toast } from "react-toastify";
 import { useConFast } from "../Context/ContextProject";
@@ -18,17 +17,6 @@ function Cart() {
     if (+couponCart === +discountCoupon) {
       dispatch(applicationCouponAsync());
       setCouponCart("");
-      // toast.success(`The Coupojn was applyed!`, {
-      //   position: "top-right",
-      //   autoClose: 4000,
-      //   hideProgressBar: true,
-      //   closeOnClick: true,
-      //   pauseOnHover: true,
-      //   draggable: true,
-      //   progress: undefined,
-      //   theme: "colored",
-      //   transition: Flip,
-      // });
     } else {
       setCouponCart("");
       toast.error(`I am sorry the coupon is unvalid!`, {
@@ -65,10 +53,6 @@ function Cart() {
             />
           ))}
         </div>
-        {/* <div className="w-full flex">
-          <span className="w-6/12 bg-red-900 ">b</span>
-          <div className="w-6/12 bg-red-200">c</div>
-        </div> */}
       </div>
       <span className="sm:w-[70%] w-[98%] mx-auto flex mt-9 justify-between">
         <Link

@@ -14,7 +14,7 @@ function AboutUs() {
   return (
     <div
       id="about"
-      className="pb-auto absolute  bottom-0 bg-black w-full mx-auto pt-10 lg:pb-20 sm:pb-10 pb-20 lg:px-20 px-10"
+      className="pb-auto flex-shrink-0 mt-10 sm:mt-20 bg-black w-full mx-auto pt-10 lg:pb-20 sm:pb-10 pb-20 lg:px-20 px-10"
     >
       <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 justify-center  sm:text-start text-center text-white gap-9">
         <div className="flex flex-col w-full gap-5 ">
@@ -87,23 +87,6 @@ function AboutUs() {
           <p className="text-[10px] text-stone-400">
             Save 3$ with App New User Only
           </p>
-          {/* <span className="flex w-9/12 justify-between">
-            <img
-              src="..\public\images\qr code.png"
-              alt="qr-code"
-              className="w-5/12 ml-1 mr-2"
-            />
-            <p className="text-xs flex flex-col justify-center ">
-              <p className="border mb-2 rounded-md p-1">
-                <p className="text-[9px] text-center">Get It On</p>
-                <h2 className="font-semibold text-xs">Google play</h2>
-              </p>
-              <p className="border rounded-md p-1">
-                <p className="text-[10px] text-center">Get It</p>
-                <h2 className="font-semibold">On App Store</h2>
-              </p>
-            </p>
-          </span> */}
           <span className="w-full">
             <img
               className="w-9/12 sm:mx-0 mx-auto"
@@ -138,8 +121,6 @@ function AboutUs() {
             </a>
           </span>
         </div>
-        {/* <MessageFooter />
-        <ContactUs /> */}
       </div>
     </div>
   );

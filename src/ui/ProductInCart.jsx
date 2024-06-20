@@ -3,14 +3,11 @@ import {
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { deleteProduct, changeAmount, calcPrice } from "../features/cartSlice";
 function ProductInCart({ product }) {
-  const cart = useSelector((state) => state.cart.cart);
-  const price = useSelector((state) => state.cart.price);
   const dispatch = useDispatch();
   const { id, categoryId, size, color, amount } = product;
-  // const [handlePrice, setHandlePrice] = useState(amount);
   return (
     <div className="w-full mt-8 h-16 flex justify-between text-sm  py-4">
       <span className="w-5/12 space-x-2">
@@ -83,7 +80,6 @@ function ProductInCart({ product }) {
         </p>
       </span>
       <span className="w-2/12 pt-2 pl-3 lg:text-sm xs:text-xs text-[10px]">
-        {/* ${numPro * (product.price - product.price * (product.discount / 100))} */}
         $ {(product.price - (product.price * product.discount) / 100) * amount}
       </span>
       <button

@@ -5,26 +5,21 @@ import HintH1 from "./HintH1";
 import MoreHome from "./MoreHome";
 import { CiHeart } from "react-icons/ci";
 
-import { useState } from "react";
 import { IoMdHeart, IoMdStar } from "react-icons/io";
 import HintHome from "./HintHome";
-import { useConFast } from "../Context/ContextProject";
-import { addItemFav } from "../features/favSlice";
+import { addItemFav, deleteItemFav } from "../features/favSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 6000, min: 1500 },
     items: 7,
   },
   LargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 1600, min: 1500 },
     items: 6.25,
   },
   desktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 1500, min: 1250 },
     items: 5.75,
     partialVisibilityGutter: 40,
@@ -67,7 +62,6 @@ const responsive = {
   },
 };
 function ExploreProducts() {
-  // const [changeFav, setChangeFav] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.favourite.products);
   return (
@@ -75,7 +69,7 @@ function ExploreProducts() {
       <HintHome> Our Products</HintHome>
       <div className="sm:w-9/12 w-full mx-auto h-full flex-col-reverse flex">
         <Carousel
-          className="mx-3"
+          className="mx-3 min-h-fit"
           responsive={responsive}
           arrows={false}
           renderButtonGroupOutside={true}
@@ -102,7 +96,15 @@ function ExploreProducts() {
                       </Link>
                       {product.fav ? (
                         <button
-                          // onClick={() => dispatch(addItemFav({ ...product }))}
+                          onClick={() =>
+                            dispatch(
+                              deleteItemFav({
+                                ...product,
+                                id: product.id,
+                                categoryId: product.categoryId,
+                              })
+                            )
+                          }
                           className="absolute p-0 text-2xl rounded-md top-2 sm:right-4 right-2 text-center text-black font-[400] ml-8 bg-transparent"
                         >
                           <IoMdHeart className="text-[#ED4444] " />

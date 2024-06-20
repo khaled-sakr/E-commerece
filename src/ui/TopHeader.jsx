@@ -52,9 +52,6 @@ function TopHeader() {
             display={pathname === "/favourite"}
             className="lg:text-2xl text-lg md:mt-10 mt-12 "
           />
-          {/* <span className="absolute -right-1 top-[42px] md:top-8 text-stone-100 lg:w-[14px] lg:h-[14px] w-[11px] h-[11px] md:w-[12px] md:h-[12px] opacity-95 text-[8px] md:text-[9px] text-center m-auto rounded-full bg-red-500">
-              1
-            </span> */}
         </Link>
         <Link
           to="/cart"

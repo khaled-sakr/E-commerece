@@ -23,9 +23,6 @@ function AdressAcc() {
       data.email === users[0].email &&
       data.phone === users[0].phone
     ) {
-      console.log("normal");
-
-      console.log(data);
       toast.info(`nothing happed`, {
         position: "top-right",
         autoClose: 4000,
@@ -42,6 +39,7 @@ function AdressAcc() {
         editAddressUser({
           userAddress: {
             ...data,
+            password: users[0].password,
           },
           id,
         })
@@ -59,7 +57,6 @@ function AdressAcc() {
       });
     }
   };
-  console.log(errors);
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}

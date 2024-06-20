@@ -1,5 +1,5 @@
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
-import { IoPersonCircle, IoPersonOutline } from "react-icons/io5";
+import { IoPersonOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { RiLogoutBoxLine } from "react-icons/ri";
 import { useState } from "react";
@@ -25,7 +25,7 @@ function IconsHeaderAuth() {
         {favourite.length !== 0 && (
           <span
             className={`absolute ${
-              cart.length && "add animate-pulse"
+              favourite.length && "add"
             } -right-1 top-[42px] md:top-9 lg:top-8 text-stone-100 lg:w-[14px] lg:h-[14px] w-[11px] h-[11px] md:w-[12px] md:h-[12px] opacity-95 text-[8px] md:text-[9px] text-center m-auto rounded-full bg-[#ED4444]`}
           >
             {favourite.length}
@@ -48,10 +48,6 @@ function IconsHeaderAuth() {
         )}
       </Link>
       <div ref={ref} to="/account" className="relative ">
-        {/* <IoPersonCircle
-          onClick={() => setShowAcc((e) => !e)}
-          className="cursor-pointer  lg:text-[28px] text-xl lg:mt-9 md:mt-10 mt-11 text-[#ED4444] hover:text-[#ad3434] "
-        /> */}{" "}
         <img
           onClick={() => setShowAcc((e) => !e)}
           src={users[0].imageSrc}
@@ -61,17 +57,10 @@ function IconsHeaderAuth() {
         {showAcc && (
           <div className="lg:w-40 md:w-40 w-32 h-fit absolute right-0 top-[70px] text-stone-800 text-[12px]  text-center rounded-[3px] z-10 bg-transparent flex flex-col justify-between text-base font-semibold">
             <div className=" bg-stone-200/50 backdrop-blur-lg">
-              {/* <img
-                // onClick={() => setShowAcc((e) => !e)}
-                src={users[0].imageSrc}
-                className="mb-2 w-20 h-20 mx-auto border-4 border-stone-400 mt-2"
-                alt="khaled"
-              /> */}
               <h4 className="text-sm my-2 text-stone-600">
                 {" "}
                 Hello , khaled sakr{" "}
               </h4>
-              {/* <hr className="w-[50%] mx-auto my-1 h-1" /> */}
               <Link
                 onClick={() => {
                   setShowAcc(() => false);

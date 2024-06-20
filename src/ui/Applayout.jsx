@@ -6,7 +6,10 @@ import { useConFast } from "../Context/ContextProject";
 function Applayout() {
   const { authed } = useConFast();
   return (
-    <div className="w-full max-h-max min-h-screen relative sm:pb-[340px] pb-[1500px]">
+    <div
+      className="w-full flex flex-col min-h-screen relative 
+    "
+    >
       <Header authed={authed} />
       <Outlet />
       <AboutUs />

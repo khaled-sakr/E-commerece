@@ -1,85 +1,3 @@
-// import { Link } from "react-router-dom";
-// import HintH1 from "./HintH1";
-// import HintHome from "./HintHome";
-// import { GiBabyFace, GiFreedomDove } from "react-icons/gi";
-// import { MdSportsScore } from "react-icons/md";
-// const productFlash = [
-//   {
-//     categoryId: "1",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "2",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "3",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "4",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "5",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "6",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "7",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "8",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "9",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "10",
-//     name: "palestine",
-//   },
-//   {
-//     categoryId: "11",
-//     name: "palestine",
-//   },
-// ];
-// function CategoriesHome() {
-//   return (
-//     // <div>
-//     //   <HintHome>Categories</HintHome>
-//     //   <div className="sm:w-9/12 h-fit mx-2 sm:mx-auto w-[95%] grid grid-flow-row overflow-hidden">
-//     //     <HintH1>Browes By Categories</HintH1>
-//     //     <div className="grid grid-flow-col sm:w-full mx-auto h-36 rounded-md mb-10 mt-2 overflow-x-scroll scrollInvisable justify-start p-1 space-x-5 ">
-//     //       {productFlash.map((product) => (
-//     //         <Link
-//     //           to={`/category/:${product.id}`}
-//     //           key={product.id}
-//     //           className="md:w-[149px] sm:w-[130px] w-[100px]  px-5 py-4 my-auto h-[120px] border cursor-pointer rounded-sm hover:bg-red-500 text-black hover:text-white"
-//     //         >
-//     //           <MdSportsScore className="sm:text-4xl text-3xl mx-auto w-full" />
-//     //           <span className="flex justify-center sm:text-sm text-xs py-3 font-[500]">
-//     //             {product.name}
-//     //           </span>
-//     //         </Link>
-//     //       ))}
-//     //     </div>
-//     //     <hr />
-//     //   </div>
-//     // </div>
-//     <div>
-
-//     </div>
-//   );
-// }
-
-// export default CategoriesHome;
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
@@ -160,7 +78,6 @@ function CategoriesHome() {
               to={`/category/${category.categoryId}`}
               className="md:w-[149px] w-[120px] px-5 py-4 my-3 h-[110px] sm:h-[120px] inline-block cursor-pointer rounded-sm border hover:bg-red-500 text-black hover:text-white"
             >
-              {/* <MdSportsScore className="sm:text-4xl text-3xl mx-auto w-full" /> */}
               <FontAwesomeIcon
                 icon={category.icon}
                 className="sm:text-4xl text-3xl mx-auto w-full"

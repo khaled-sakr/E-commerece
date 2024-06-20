@@ -125,19 +125,6 @@ function CategoriesInShop({ type, categoryId }) {
                       </span>
 
                       <span className="flex text-yellow-500 text-xl ml-2 mt-1">
-                        {/* {product.numberOfStars.for(() => {
-                      <IoMdStar />;
-                    })} */}
-                        {/* {product.foreach(i=0; i<product.numberOfStars; i++){
-                      <IoMdStar />
-                    } */}
-                        {/* {product.numberOfStars.foreach(() => {
-                      <IoMdStar />;
-                    })}
-                    } }/////////////////////////////////////////////
-
-                    {/* 
-                  <IoMdStar /> */}
                         <IoMdStar />
                         <IoMdStar />
                         <IoMdStar />

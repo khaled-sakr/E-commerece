@@ -1,13 +1,12 @@
 import { FaPlus, FaStar } from "react-icons/fa6";
 import { GiReturnArrow } from "react-icons/gi";
 import { FaStarHalfAlt } from "react-icons/fa";
-import { FiHeart, FiMinus } from "react-icons/fi";
+import { FiMinus } from "react-icons/fi";
 import { PiVan } from "react-icons/pi";
 import Category from "./Category";
 import { useEffect, useState } from "react";
 import AdressPage from "../ui/AdressPage";
 import { useLocation, useParams } from "react-router-dom";
-import { useConFast } from "../Context/ContextProject";
 import { IoMdHeart } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemAsync } from "../features/cartSlice";
@@ -16,7 +15,6 @@ import { CiHeart } from "react-icons/ci";
 import { addItemFav, deleteItemFav } from "../features/favSlice";
 function Product() {
   const { categoryId, productId } = useParams();
-  // const {} = useConFast;
   const products = useSelector((state) => state.favourite.products);
   const cart = useSelector((state) => state.cart.cart);
   const location = useLocation();
@@ -55,52 +53,6 @@ function Product() {
 
     return false;
   }
-  console.log(containsObject(product, cart));
-  // console.log(product, cart);
-  // const cart = useSelector((state) => state.cart.cart);
-  // console.log(cart, size, color, num);
-  // function toastBuying() {
-  //   useEffect(() => {
-  //     const timeout = setTimeout(() => {
-  //       toast.success(
-  //         `${name} ,${color} color,${size} size has been added to the Cart`,
-  //         {
-  //           position: "top-right",
-  //           autoClose: 3000,
-  //           hideProgressBar: false,
-  //           closeOnClick: true,
-  //           pauseOnHover: true,
-  //           draggable: true,
-  //           progress: undefined,
-  //           theme: "colored",
-  //           transition: Flip,
-  //         }
-  //       );
-  //     }, 2000);
-  //     timeout();
-  //   }, []);
-  // }
-  // useEffect(
-  //   () =>
-  //     setTimeout(() => {
-  //       toast.success(
-  //         `${name} ,${color} color,${size} size has been added to the Cart`,
-  //         {
-  //           position: "top-right",
-  //           autoClose: 3000,
-  //           hideProgressBar: false,
-  //           closeOnClick: true,
-  //           pauseOnHover: true,
-  //           draggable: true,
-  //           progress: undefined,
-  //           theme: "colored",
-  //           transition: Flip,
-  //         }
-  //       );
-  //       setTimeout();
-  //     }, time),
-  //   []
-  // );
 
   return (
     <>
@@ -252,13 +204,11 @@ function Product() {
                   setNum(1);
                   setColor("black");
                   setSize("M");
-                  // toastBuying();
                 } else {
-                  console.log("alhamd llah");
                   toast.info(
-                    `This product is exist in cart with same descriptions, if you want more go cart and increase number`,
+                    `This product is exist in the cart with the same descriptions, choose the other descriptions or go to the cart and increase the number`,
                     {
-                      position: "top-center",
+                      position: "top-right",
                       autoClose: 3000,
                       hideProgressBar: true,
                       closeOnClick: true,
@@ -326,7 +276,7 @@ function Product() {
         </span>
       </div>
 
-      <Category withHint={false} anotherHint={"related Products"} />
+      <Category withHint={false} anotherHint={"Related Products"} />
     </>
   );
 }

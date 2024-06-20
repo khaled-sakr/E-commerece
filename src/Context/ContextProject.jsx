@@ -21,7 +21,21 @@ const users = [
     },
     AddressPref: "baqlola,elsanta,el Gharbia",
     phone: 201028577310,
-    password: "11223344",
+    password: "12345678",
+  },
+  {
+    name: { firstName: "khaled", lastName: "sakr" },
+    imageSrc: "/images/me.jpg",
+    email: "khaled.ibrahem.sakr@gmail.com",
+    address: {
+      companyName: "the company",
+      streetAddress: "the-central-street",
+      governorate: "el Gharbia",
+      cityOrTown: "baqlola.elsanta",
+    },
+    AddressPref: "baqlola,elsanta,el Gharbia",
+    phone: 201028577310,
+    password: "12345678",
   },
 ];
 const products = [
@@ -200,7 +214,7 @@ const ContextProjectPro = createContext();
 function ContextProject({ children }) {
   // const { categoryId, productId } = useParams();
   const [numPro, setNumPro] = useState(2);
-  const [authed, setAuthed] = useState(true);
+  const [authed, setAuthed] = useState();
   const [couponCart, setCouponCart] = useState();
   const [detailsShow, setdetailsShow] = useState(true);
   const discountCoupon = 1234;

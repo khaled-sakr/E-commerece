@@ -1,11 +1,6 @@
 import { CiDollar, CiMoneyCheck1, CiShop } from "react-icons/ci";
 import { PiHandbagLight } from "react-icons/pi";
 import { GiMoneyStack } from "react-icons/gi";
-import {
-  LiaHeadphonesSolid,
-  LiaShieldAltSolid,
-  LiaShuttleVanSolid,
-} from "react-icons/lia";
 import Founder from "../ui/Founder";
 import AdditionFet from "../ui/AdditionFet";
 import AdressPage from "../ui/AdressPage";
@@ -33,7 +28,6 @@ function About() {
           alt=""
         />
       </div>
-      {/* <hr className="lg:my-14 sm:my-9 my-6 border-slate-500 sm:w-6/12 w-8/12 mx-auto" /> */}
       <div className="md:flex grid grid-flow-row mt-32 md:space-y-0 space-y-3 mx-auto  md:justify-center mb-16">
         <span className="md:w-[18%] lg:w-[14%] xs:w-6/12 w-8/12 border h-40 p-auto text-center md:mx-2 mx-auto rounded-sm border-slate-300 ">
           <p className="mt-3 bg-gray-400 inline-block sm:p-2 p-1 rounded-full">

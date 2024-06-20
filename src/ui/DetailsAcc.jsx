@@ -11,17 +11,22 @@ function DetailsAcc() {
   const inputRef = useRef(null);
   const [image, setImage] = useState("");
   const imageready = image;
-  // const { update } = useFieldArray({ name: "data" });
   const users = useSelector((state) => state.user.user);
   const { register, handleSubmit, formState, reset, getValues } = useForm({
-    defaultValues: { ...users[0], password: "", imageSrc: users[0].imageSrc },
+    defaultValues: {
+      ...users[0],
+      password: "",
+      newPassword: "",
+      conNewPassword: "",
+      imageSrc: users[0].imageSrc,
+    },
   });
+
   function handleImageClick() {
     inputRef.current.click();
   }
   function handleImageChange(event) {
     const file = event.target.files[0];
-    console.log(file);
     setImage(event.target.files[0]);
     dispatch(
       editImageUser({
@@ -31,27 +36,18 @@ function DetailsAcc() {
       })
     );
   }
-  // const { update } = useFieldArray({ name: "array" });
-  // update(0, { password: "1 }))
-  // setValue("name", "value", { shouldDirty: true });
   const { errors } = formState;
-  // const { replace } = useFieldArray({ name: "password" });
   const dispatch = useDispatch();
   const id = 285;
   const onSubmit = (data) => {
-    if (
+    const ifChange =
       users[0].imageName === image.name &&
       data.addressPref === users[0].addressPref &&
       data.firstName === users[0].firstName &&
       data.lastName === users[0].lastName &&
       data.email === users[0].email &&
-      data.password === ""
-      // &&
-      // data.password === users[0].password
-    ) {
-      // unregister("password");
-      // unregister("newPassword");
-      // unregister("Password");
+      data.password === "";
+    if (ifChange) {
       toast.info(`nothing happed`, {
         position: "top-right",
         autoClose: 4000,
@@ -82,13 +78,11 @@ function DetailsAcc() {
           transition: Flip,
         });
       } else {
-        console.log(users[0].imageBool);
         dispatch(
           editInfoUser({
             userIfo: {
               ...data,
-              password:
-                data.password === "" ? users[0].password : data.password,
+              password: !data.password ? users[0].password : data.password,
             },
             id: id,
             password:
@@ -107,7 +101,6 @@ function DetailsAcc() {
               imageName: image.name,
             })
           );
-        console.log("ssss");
         toast.success(`The Change had been done`, {
           position: "top-right",
           autoClose: 4000,
@@ -119,26 +112,16 @@ function DetailsAcc() {
           theme: "colored",
           transition: Flip,
         });
-        // reset({ password: "", newPassword: "", conNewPassword: "" });
-        // unregister("password");
-        // update(0, { password: "" });
-        // useEffect(() => {
+
         reset({
           password: "",
           newPassword: "",
           conNewPassword: "",
         });
-        // }, []);
-
-        // replace([{ password: "" }]);
       }
     }
-    console.log(data);
   };
-  console.log(errors);
-  // useEffect(()=>
-  // // let image=document.getElementById()
-  // )
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -280,7 +263,6 @@ function DetailsAcc() {
             maxLength: 15,
             minLength: 8,
             pattern: /^[a-zA-Z0-9\s,'-.]*$/,
-            // validate: (value) => value === getValues().newPassword,
           })}
           className="placeholder:text-[10px] font-semibold sm:text-sm text-xs sm:placeholder:text-xs md:placeholder:text-sm sm:w-full w-9/12 md:h-10 sm:h-9 xs:h-8 h-7 bg-stone-100 rounded-[3px] outline-none p-3"
         />{" "}
@@ -300,7 +282,7 @@ function DetailsAcc() {
         <input
           placeholder="New Password"
           {...register("newPassword", {
-            required: getValues().password === "" ? false : true,
+            required: getValues().password !== "" ? true : false,
             maxLength: 15,
             minLength: 8,
             pattern: /^[a-zA-Z0-9\s,'-.]*$/,
@@ -326,6 +308,7 @@ function DetailsAcc() {
           placeholder="Confirm New Password"
           type="password"
           {...register("conNewPassword", {
+            // required: getValues().password !== "" ? true : false,
             required: getValues().password !== "" ? true : false,
             maxLength: 15,
             minLength: 8,
@@ -372,10 +355,12 @@ function DetailsAcc() {
         <input
           type="submit"
           value="Save Changes"
-          className="lg:w-3/12 sm:w-4/12 w-5/12 shadow-md py-3 border-[1.5px] rounded-[4px] border-slate-300 text-center bg-[#DB4444] hover:bg-[#ad3434] text-white"
+          className="lg:w-3/12 disabled:bg-gray-500 sm:w-4/12 w-5/12 shadow-md py-3 border-[1.5px] rounded-[4px] border-slate-300 text-center bg-[#DB4444] hover:bg-[#ad3434] text-white"
         />
       </span>
-      <div>{users[0].password}</div>
+      <div className="text-sm block font-semibold">
+        <span>currnet password:</span>'{users[0].password}'
+      </div>
     </form>
   );
 }

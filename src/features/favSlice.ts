@@ -22,6 +22,7 @@ const initialState: favState = {
       flash: true,
       fav: false,
       size: "M",
+      stars: 4,
       colors: ["black", "white", "[#DB4444]"],
     },
     {
@@ -38,6 +39,7 @@ const initialState: favState = {
       flash: false,
       fav: false,
       size: "M",
+      stars: 3.5,
       colors: ["black", "white", "[#DB4444]"],
     },
     {
@@ -54,6 +56,7 @@ const initialState: favState = {
       flash: false,
       fav: false,
       size: "M",
+      stars: 5.5,
       colors: ["black", "white", "[#DB4444]"],
     },
     {
@@ -70,6 +73,7 @@ const initialState: favState = {
       flash: true,
       fav: false,
       size: "M",
+      stars: 3.5,
       colors: ["black", "white", "[#DB4444]"],
     },
     {
@@ -86,6 +90,7 @@ const initialState: favState = {
       flash: false,
       fav: false,
       size: "M",
+      stars: 4.5,
       colors: ["black", "white", "[#DB4444]"],
     },
     {
@@ -102,6 +107,7 @@ const initialState: favState = {
       flash: false,
       fav: false,
       size: "M",
+      stars: 5.5,
       colors: ["black", "white", "[#DB4444]"],
     },
     {
@@ -118,6 +124,7 @@ const initialState: favState = {
       flash: false,
       fav: false,
       size: "M",
+      stars: 3.5,
       colors: ["black", "white", "[#DB4444]"],
     },
     {
@@ -134,6 +141,7 @@ const initialState: favState = {
       flash: false,
       fav: false,
       size: "M",
+      stars: 4.5,
       colors: ["black", "white", "[#DB4444]"],
     },
   ],
@@ -160,7 +168,7 @@ const favSlice = createSlice({
         ...action.payload,
       });
       toast.success(`This product has been added to the favourite`, {
-        position: "top-center",
+        position: "top-right",
         autoClose: 3000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -192,7 +200,7 @@ const favSlice = createSlice({
       targetProduct.fav = false;
       state.favourite = state.favourite.filter((prod) => prod !== targetFav);
       toast.info(`This product has been deleted from the favourite`, {
-        position: "top-center",
+        position: "top-right",
         autoClose: 3000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -203,95 +211,7 @@ const favSlice = createSlice({
         transition: Flip,
       });
     },
-    //   deleteProduct: (
-    //     state,
-    //     action: PayloadAction<{
-    //       categoryId: string;
-    //       id: string;
-    //       size: string;
-    //       color: string;
-    //       amount: number;
-    //     }>
-    //   ) => {
-    //     const target = state.favourite.find(
-    //       (product) =>
-    //         product.categoryId === action.payload.categoryId &&
-    //         product.id === action.payload.id &&
-    //         product.size === action.payload.size &&
-    //         product.color === action.payload.color &&
-    //         product.amount === action.payload.amount
-    //     );
-    //     state.favourite = state.favourite.filter((prod) => prod !== target);
-    //   },
   },
-  // extraReducers: (builder) => {
-  //   builder
-  //     .addCase(
-  //       addItemAsync.fulfilled,
-  //       (
-  //         state,
-  //         action: PayloadAction<{
-  //           product: object;
-  //           color: string;
-  //           size: string;
-  //           amount: number;
-  //         }>
-  //       ) => {
-  //         toast.success(`This product has been added to the Cart`, {
-  //           position: "top-center",
-  //           autoClose: 3000,
-  //           hideProgressBar: false,
-  //           closeOnClick: true,
-  //           pauseOnHover: true,
-  //           draggable: true,
-  //           progress: undefined,
-  //           theme: "colored",
-  //           transition: Flip,
-  //         });
-  //         state.cart.push({
-  //           ...action.payload,
-  //         });
-  //         cartSlice.caseReducers.calcPrice(state);
-  //       }
-  //     )
-  //     // .addCase(clearCartAsync.fulfilled, (state) => {
-  //     //   toast.success(`Your Order had been sumbitted 👌`, {
-  //     //     position: "top-center",
-  //     //     autoClose: 3000,
-  //     //     hideProgressBar: false,
-  //     //     closeOnClick: true,
-  //     //     pauseOnHover: true,
-  //     //     draggable: true,
-  //     //     progress: undefined,
-  //     //     theme: "colored",
-  //     //     transition: Flip,
-  //     //   });
-  //     //   state.order = state.cart;
-  //     //   state.cart = [];
-  //     // })
 });
-// export const addItemAsync = createAsyncThunk(
-//   "cartSlice/addItemAsync",
-//   async (cart: any) => {
-//     await new Promise((resolve) => setTimeout(resolve, 100));
-//     return cart;
-//   }
-// );
-// export const clearCartAsync = createAsyncThunk(
-//   "cartSlice/clearCartAsync",
-//   async (order: any) => {
-//     await new Promise((resolve) => setTimeout(resolve, 300));
-//     return order;
-//   }
-// );
-// export const {
-//   // addItem,
-//   // deleteProduct,
-//   // calcPrice,
-//   // changeAmount,
-//   // applicationCoupon,
-//   // clearCart,
-//   // clearOrder,
-// } = favState.actions;
 export const { addItemFav, deleteItemFav } = favSlice.actions;
 export default favSlice.reducer;

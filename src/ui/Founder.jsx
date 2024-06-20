@@ -50,7 +50,6 @@ function Founder() {
       <span className="sm:w-[20%] w-7/12 flex flex-col sm:m-0 m-auto">
         <img
           src="\images\eslam.jpg"
-          // src="\images\me.jpg"
           alt="Eslam badran"
           className="rounded-md"
         />

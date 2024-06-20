@@ -10,7 +10,6 @@ function CatInShop() {
         {" "}
         {categories.map((category) => (
           <Link
-            // <CategoriesInShop type= id= />
             to={`/category/${category.categoryId}`}
             className="rounded-sm mx-auto px-3 py-2 font-semibold border border-stone-300 hover:text-white bg-transparent hover:bg-[#DB4444] w-full text-center"
           >

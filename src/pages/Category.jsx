@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItemFav, deleteItemFav } from "../features/favSlice";
 
 function Category({ withHint = true, anotherHint = false }) {
-  // const [changeFav, setChangeFav] = useState(false);
   const { categoryId } = useParams();
   const products = useSelector((state) => state.favourite.products);
   const dispatch = useDispatch();
@@ -21,10 +20,6 @@ function Category({ withHint = true, anotherHint = false }) {
       {withHint ? (
         <AdressPage firstAddress="Home/" secAddress=" Category" />
       ) : (
-        // <div className="font-semibold sm:w-9/12 w-full mx-auto mt-10 md:text-2xl text-lg">
-        // {/* {anotherHint} */}
-        // {/* </div> */}
-
         <HintHome>{anotherHint}</HintHome>
       )}
       <div className="grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-3 grid-cols-2 sm:w-9/12 w-full m-auto mt-10 gap-y-16 md:gap-x-5 gap-x-0">
@@ -73,7 +68,7 @@ function Category({ withHint = true, anotherHint = false }) {
             <div className="sm:w-44 w-32 z-10 h-20 overflow-hidden">
               <span className="m-auto">
                 <span className="block text-base text-start font-[500] ml-3 mb-1">
-                  Anime Etatche
+                  {product.name}
                 </span>
                 <span className="text-red-400 text-sm font-[500] sm:ml-3 start">
                   ${product.price - product.price * (product.discount / 100)}

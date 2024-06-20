@@ -1,32 +1,21 @@
 import Carousel from "react-multi-carousel";
 import HintH1 from "./HintH1";
 import HintHome from "./HintHome";
-import MoreHome from "./MoreHome";
-// import ProductHomeFlash from "./ProductHomeFlash";
 import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-// import { FaHeart } from "react-icons/fa";
-import { IoMdHeart, IoMdStar } from "react-icons/io";
-import { useConFast } from "../Context/ContextProject";
+import { IoMdHeart, IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { addItemFav, deleteItemFav } from "../features/favSlice";
 import { useDispatch, useSelector } from "react-redux";
-// import { MdStarBorder } from "react-icons/md";
-// import { MdStarBorder } from "react-icons/md"
-
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 6000, min: 1500 },
     items: 7,
   },
   LargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 1600, min: 1500 },
     items: 6.25,
   },
   desktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 1500, min: 1250 },
     items: 5.75,
     partialVisibilityGutter: 40,
@@ -69,7 +58,6 @@ const responsive = {
   },
 };
 function FlashSales() {
-  // const [changeFav, setChangeFav] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.favourite.products);
   return (
@@ -78,11 +66,20 @@ function FlashSales() {
         <HintHome>Today's</HintHome>
         <div className="sm:w-9/12 w-full mx-auto h-full flex-col-reverse flex">
           <Carousel
-            className="mx-3"
+            className="mx-3 min-h-fit"
             responsive={responsive}
             arrows={false}
             renderButtonGroupOutside={true}
-            customButtonGroup={<HintH1 numberPros={" (1)"}>Flash Sales</HintH1>}
+            enableSwipe={true}
+            customButtonGroup={
+              <HintH1
+                numberPros={` (${
+                  products.filter((product) => product.flash).length
+                })`}
+              >
+                Flash Sales
+              </HintH1>
+            }
           >
             {products.map(
               (product) =>
@@ -109,16 +106,6 @@ function FlashSales() {
                             {product.discount}%
                           </span>
                         </Link>
-                        {/* <button
-                          onClick={() => dispatch(addItemFav({ ...product }))}
-                          className="absolute p-0 text-2xl rounded-md top-2 sm:right-4 right-2 text-center text-black font-[400] ml-8 bg-transparent"
-                        >
-                          {product.fav ? (
-                            <IoMdHeart className="text-[#ED4444] " />
-                          ) : (
-                            <CiHeart />
-                          )}
-                        </button> */}
                         {product.fav ? (
                           <button
                             onClick={() =>
@@ -158,11 +145,22 @@ function FlashSales() {
                           ${product.price}
                         </span>
                         <span className="flex text-yellow-500 text-xl ml-2 mt-1 ">
-                          <IoMdStar />
-                          <IoMdStar />
-                          <IoMdStar />
-                          <IoMdStar />
-                          <IoMdStar />
+                          {Array.apply(null, { length: product.stars }).map(
+                            (i) => (
+                              <span className="busterCards" key={i}>
+                                <IoMdStar />
+                              </span>
+                            )
+                          )}
+                          {Number(
+                            (product.stars - Math.trunc(product.stars)).toFixed(
+                              2
+                            )
+                          ) ? (
+                            <IoMdStarHalf />
+                          ) : (
+                            ""
+                          )}
 
                           <span className="text-slate-400 text-sm ml-2">
                             (54)
@@ -174,7 +172,6 @@ function FlashSales() {
                 )
             )}
           </Carousel>
-          {/* <MoreHome>All Products</MoreHome> */}
         </div>
         <hr className="mx-auto sm:w-9/12 w-11/12 mt-9" />
       </div>
@@ -183,23 +180,3 @@ function FlashSales() {
 }
 
 export default FlashSales;
-
-//     //   <div className="sm:w-9/12 h-fit mx-2 sm:mx-auto w-[95%] grid grid-flow-row overflow-hidden">
-//     //     <HintH1>Browes By Categories</HintH1>
-//     //     <div className="grid grid-flow-col sm:w-full mx-auto h-36 rounded-md mb-10 mt-2 overflow-x-scroll scrollInvisable justify-start p-1 space-x-5 ">
-//     //       {productFlash.map((product) => (
-//     //         <Link
-//     //           to={`/category/:${product.id}`}
-//     //           key={product.id}
-//     //           className="md:w-[149px] sm:w-[130px] w-[100px]  px-5 py-4 my-auto h-[120px] border cursor-pointer rounded-sm hover:bg-red-500 text-black hover:text-white"
-//     //         >
-//     //           <MdSportsScore className="sm:text-4xl text-3xl mx-auto w-full" />
-//     //           <span className="flex justify-center sm:text-sm text-xs py-3 font-[500]">
-//     //             {product.name}
-//     //           </span>
-//     //         </Link>
-//     //       ))}
-//     //     </div>
-//     //     <hr />
-//     //   </div>
-//     // <div>

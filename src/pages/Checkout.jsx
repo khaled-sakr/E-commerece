@@ -175,10 +175,6 @@ function Checkout() {
             />
           </span>
           <span className="space-y-1 my-4 h-16 space-x-3 pb-3 relative">
-            {/* <input disabled
-              type="checkbox"
-              className="h-4 w-4 p-2 border-3 text-red-400 absolute top-1"
-            /> */}
             <Link
               onClick={() => setdetailsShow(false)}
               to="/account"
@@ -253,13 +249,7 @@ function Checkout() {
                       className="sm:w-5 w-4 sm:h-5 h-4 rounded-full  border-black  border-[1px] bg-transparent"
                     ></button>
                   </span>
-
-                  // <button
-                  //   onClick={() => setPayment((e) => !e)}
-                  //   className="w-5 h-5 rounded-full  hover:border-stone-900 border-transparent  border-2 bg-black "
-                  // ></button>
                 )}
-                {/* <input disabled type="checkbox" className="h-4 w-4 mt-1" /> */}
                 <p className=" font-semibold">Bank</p>
               </span>
 
@@ -287,13 +277,7 @@ function Checkout() {
                       className="sm:w-5 w-4 sm:h-5 h-4 rounded-full  border-black  border-[1px] bg-transparent"
                     ></button>
                   </span>
-
-                  // <button
-                  //   onClick={() => setPayment((e) => !e)}
-                  //   className="w-5 h-5 rounded-full  hover:border-stone-900 border-transparent  border-2 bg-black "
-                  // ></button>
                 )}
-                {/* <input disabled type="checkbox" className="h-4 w-4 mt-1" /> */}
                 <p className=" font-semibold">Cash on Delivery</p>
               </span>
             </span>
