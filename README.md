@@ -85,6 +85,7 @@ t-empire/
 └── .vite.config.js ...
 
 ### Screenshots
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20142949.png' width='200' hiegth='300'>
 ![Slide1](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20142949.png)
 ![Slide2](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143035.png)
 ![Slide3](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143106.png)
