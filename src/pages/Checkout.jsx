@@ -20,7 +20,7 @@ function Checkout() {
       dispatch(applicationCouponAsync());
       setCouponCart("");
       toast.success(`The Coupojn was applyed!`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -33,7 +33,7 @@ function Checkout() {
     } else {
       setCouponCart("");
       toast.error(`I am sorry the coupon is unvalid!`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: true,

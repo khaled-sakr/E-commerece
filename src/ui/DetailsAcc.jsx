@@ -48,7 +48,7 @@ function DetailsAcc() {
       data.password === "";
     if (ifChange) {
       toast.info(`nothing happed`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -66,7 +66,7 @@ function DetailsAcc() {
           conNewPassword: "",
         });
         toast.error(`The Current Password is wrong`, {
-          position: "top-right",
+          position: "top-left",
           autoClose: 4000,
           hideProgressBar: true,
           closeOnClick: true,
@@ -101,7 +101,7 @@ function DetailsAcc() {
             })
           );
         toast.success(`The Change had been done`, {
-          position: "top-right",
+          position: "top-left",
           autoClose: 4000,
           hideProgressBar: true,
           closeOnClick: true,
@@ -334,7 +334,7 @@ function DetailsAcc() {
           onClick={() => {
             reset();
             toast.info(`Reset The latest changes`, {
-              position: "top-right",
+              position: "top-left",
               autoClose: 4000,
               hideProgressBar: true,
               closeOnClick: true,

@@ -14,13 +14,17 @@ function ProductInCart({ product }) {
         <img
           src={product.srcOne}
           alt="t-shirt"
-          className="xs:w-9 w-5 inline ml-1"
+          className="xs:w-9 w-5 inline ml-0 xs:mt-0 mt-3"
         />
         <Link
           to={`/category/${product.categoryId}/product/${product.id}`}
           className="lg:text-xs xs:text-[10px] text-[8px] relative after:absolute after:w-0 after:duration-300 hover:after:w-full after:h-[1px] after:left-0 after:bg-black after:top-5 cursor-pointer"
         >
-          {product.name},{product.color},{product.size}
+          {product.name.split("").length < 5
+            ? product.name.split("")
+            : product.name.split("").slice(0, 4).toString().replace(/,/g, "") +
+              ".."}
+          , {product.color}, {product.size}
         </Link>
       </span>
       <span className="w-4/12 pt-2 lg:text-sm xs:text-xs text-[10px]">

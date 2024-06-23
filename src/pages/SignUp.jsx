@@ -4,7 +4,7 @@ import { Flip, toast } from "react-toastify";
 function SignUp() {
   function notify() {
     toast.error("sorry , this field is not completed yet", {
-      position: "top-right",
+      position: "top-left",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,

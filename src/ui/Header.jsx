@@ -29,7 +29,7 @@ function Header() {
   const notify = () => {
     !authed &&
       toast.error("sorry , please Log In first!", {
-        position: "top-right",
+        position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,

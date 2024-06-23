@@ -219,7 +219,7 @@ function Product() {
                   toast.info(
                     `This product is exist in the cart with the same descriptions, choose the other descriptions or go to the cart and increase the number`,
                     {
-                      position: "top-right",
+                      position: "top-left",
                       autoClose: 3000,
                       hideProgressBar: true,
                       closeOnClick: true,

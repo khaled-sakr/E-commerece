@@ -52,7 +52,7 @@ const cartSlice = createSlice({
       state.order = state.cart;
       state.cart = [];
       toast.success(`Your Order had been sumbitted 👌`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -130,7 +130,7 @@ const cartSlice = createSlice({
           }>
         ) => {
           toast.success(`This product has been added to the Cart`, {
-            position: "top-right",
+            position: "top-left",
             autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -148,7 +148,7 @@ const cartSlice = createSlice({
       )
       .addCase(applicationCouponAsync.fulfilled, (state) => {
         toast.success(`Coupon had been applyed`, {
-          position: "top-right",
+          position: "top-left",
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,

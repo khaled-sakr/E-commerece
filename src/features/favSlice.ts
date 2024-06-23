@@ -176,7 +176,7 @@ const favSlice = createSlice({
         ...action.payload,
       });
       toast.success(`This product has been added to the favourite`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 3000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -208,7 +208,7 @@ const favSlice = createSlice({
       targetProduct.fav = false;
       state.favourite = state.favourite.filter((prod) => prod !== targetFav);
       toast.info(`This product has been deleted from the favourite`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 3000,
         hideProgressBar: true,
         closeOnClick: true,

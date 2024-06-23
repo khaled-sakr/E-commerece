@@ -1,5 +1,4 @@
 import { useConFast } from "../Context/ContextProject";
-import { Link, useNavigate } from "react-router-dom";
 import { Flip, toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -8,7 +7,6 @@ import ErrorForms from "../ui/ErrorForms";
 function Login() {
   const users = useSelector((state) => state.user.user);
   const { authed, setAuthed } = useConFast();
-  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -22,7 +20,7 @@ function Login() {
       toast.success(
         `hello Mr ${users[0].firstName} , you are in your account now ♥`,
         {
-          position: "top-right",
+          position: "top-left",
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -37,7 +35,7 @@ function Login() {
   const notifyFailed = () => {
     !authed &&
       toast.error(`sorry, check your email and password!`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -52,6 +50,7 @@ function Login() {
     if (data.email === users[0].email && data.password === users[0].password) {
       setAuthed(true);
       notifySuccess();
+      window.scrollTo(0, 0);
       reset();
     } else {
       setAuthed(false);

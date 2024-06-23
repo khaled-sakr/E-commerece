@@ -59,7 +59,7 @@ function Favourite() {
               <Link
                 onClick={() =>
                   toast.info(`please choose your description`, {
-                    position: "top-right",
+                    position: "top-left",
                     autoClose: 3000,
                     hideProgressBar: true,
                     closeOnClick: true,

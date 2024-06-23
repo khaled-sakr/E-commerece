@@ -24,7 +24,7 @@ function AdressAcc() {
       data.phone === users[0].phone
     ) {
       toast.info(`nothing happed`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -45,7 +45,7 @@ function AdressAcc() {
         })
       );
       toast.success(`The Change had been done`, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: true,
@@ -249,7 +249,7 @@ function AdressAcc() {
           onClick={() => {
             reset();
             toast.info(`Reset The latest changes`, {
-              position: "top-right",
+              position: "top-left",
               autoClose: 4000,
               hideProgressBar: true,
               closeOnClick: true,

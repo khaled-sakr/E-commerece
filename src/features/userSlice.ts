@@ -1,5 +1,4 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { Flip, toast } from "react-toastify";
 
 interface userState {
   user: any[];
