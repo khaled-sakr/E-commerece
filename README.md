@@ -86,8 +86,8 @@ t-empire/
 
 ### Screenshots
 <div>
-  <img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20142949.png' width='300' heigth='250'>
-<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143035.png'width='300' heigth='250'>
+  <img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20142949.png' width='400' heigth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143035.png'width='400' heigth='300'>
 </div>
 <div>
 <img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143106.png'width='300' heigth='250'>
