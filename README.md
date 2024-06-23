@@ -86,23 +86,22 @@ t-empire/
 
 ### Screenshots
 <img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20142949.png' width='200' hiegth='300'>
-![Slide1](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20142949.png)
-![Slide2](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143035.png)
-![Slide3](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143106.png)
-![Slide4](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143255.png)
-![Slide5](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143320.png)
-![Slide6](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143344.png)
-![Slide7](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143400.png)
-![Slide8](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143412.png)
-![Slide9](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143426.png)
-![Slide10](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143453.png)
-![Slide11](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143517.png)
-![Slide12](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143531.png)
-![Slide13](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143558.png)
-![Slide14](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143614.png)
-![Slide15](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143632.png)
-![Slide16](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143644.png)
-![Slide17](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143709.png)
-![Slide18](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143720.png)
-![Slide19](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143734.png)
-![Slide20](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143754.png)
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143035.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143106.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143255.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143320.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143344.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143400.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143412.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143426.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143453.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143517.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143531.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143558.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143614.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143632.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143644.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143709.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143720.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143734.png'width='200' hiegth='300'>
+<img src='https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143754.png'width='200' hiegth='300'>
