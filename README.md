@@ -6,8 +6,8 @@ Currently, two official plugins are available:
 
 ## Project Documentation
 - [Video Demo](https://www.loom.com/share/312cb2ce905243aaa0d5041514334a64?sid=1a8e8a4a-23e3-40bd-9d36-695c2643b414): lets see the project.
-- [Demo](t-empire.netlify.app): the demo project in netlify 
-- [Github]([./E-learning%20Platform%20paper.pdf](https://github.com/khaled-sakr/E-commerece)): lets see the code.
+- [Demo](https://t-empire.netlify.app): the demo project in netlify 
+- [Github](https://github.com/khaled-sakr/E-commerece): lets see the code.
 
 ## Features
 - Product Listing: Browse through a curated selection of T-shirts categorized by style, color, and size.
