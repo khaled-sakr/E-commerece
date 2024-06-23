@@ -19,17 +19,20 @@ function Login() {
   const { errors } = formState;
   const notifySuccess = () => {
     !authed &&
-      toast.success(`hello Mr khaled , you are in your account now ♥`, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        transition: Flip,
-      });
+      toast.success(
+        `hello Mr ${users[0].firstName} , you are in your account now ♥`,
+        {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Flip,
+        }
+      );
   };
   const notifyFailed = () => {
     !authed &&

@@ -206,7 +206,7 @@ const categories = [
   },
   {
     categoryId: "8",
-    name: "symetrical shaps",
+    name: "symetrical",
     icon: faNfcSymbol,
   },
 ];

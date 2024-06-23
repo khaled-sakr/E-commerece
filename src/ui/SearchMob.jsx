@@ -26,14 +26,14 @@ function SearchMob() {
           name="search"
           id="search"
           type="text"
-          className={`bg-stone-100 rounded-t-md outline-none text-[12px] text-black md:p-4 p-2  mt-11 h-7 w-11/12 placeholder:text-[10px] placeholder:font-[400] ${
+          className={`bg-stone-100 rounded-t-md outline-none text-[12px] text-black md:p-4 p-2  mt-4 h-7 w-11/12 placeholder:text-[10px] placeholder:font-[400] ${
             !searchvalue && "rounded-md"
           } `}
           placeholder="What are you looking for"
         />
         <label for="search">
           <FiSearch
-            className={`absolute bg-stone-100 md:h-[32px] h-[28px] md:top-9 top-11 right-0 w-9 p-2 cursor-pointer hover:text-stone-700  text-xl rounded-t-md ${
+            className={`absolute bg-stone-100 md:h-[32px] h-[28px] md:top-9 top-4 right-0 w-9 p-2 cursor-pointer hover:text-stone-700 text-black text-xl rounded-t-md ${
               !searchvalue && "rounded-md"
             } `}
           />

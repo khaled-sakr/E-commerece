@@ -15,14 +15,16 @@ import { useConFast } from "../Context/ContextProject";
 import { Flip, toast } from "react-toastify";
 import SearchBar from "./SearchBar";
 import SearchMob from "./SearchMob";
+import { useSelector } from "react-redux";
 const styleSide =
-  " ml-5 w-full flex relative after:absolute after:text-white after:w-0 after:duration-300 after:h-[1px] after:left-0 after:bg-white after:-bottom-[2px] hover:after:w-[70%] cursor-pointer";
+  " ml-5 w-full xs:text-sm text-xs flex relative after:absolute after:text-white after:w-0 after:duration-300 after:h-[1px] after:left-0 after:bg-white after:-bottom-[2px] hover:after:w-[70%] cursor-pointer";
 
 function Header() {
-  const { authed, categories, setdetailsShow } = useConFast();
+  const { authed, setAuthed, categories, setdetailsShow } = useConFast();
   const { pathname } = useLocation();
   const [showSide, setShowSide] = useState(false);
   const [showCateg, setShowCateg] = useState(false);
+  const users = useSelector((state) => state.user.user);
   useEffect(() => setShowSide(false), [pathname]);
   const notify = () => {
     !authed &&
@@ -147,7 +149,25 @@ function Header() {
         </div>
         {showSide && (
           <div>
-            <div className="sm:hidden animSlide fixed left-0 top-0 flex flex-col h-screen z-[20] xs:w-[220px] w-[180px] text-sm bg-stone-800 text-white space-y-5 py-9 px-3">
+            <div className="sm:hidden animSlide fixed left-0 top-0 flex flex-col h-screen z-[20] xs:w-[220px] w-[180px] text-sm bg-stone-800 text-white space-y-5 py-6 px-3">
+              <img
+                src={users[0].imageSrc}
+                alt="../images/me.jpg"
+                className="w-4/12 mx-auto rounded-lg block"
+              />
+              <h4 className="xs:text-sm text-xs text-stone-600 xs:ml-10 ml-4">
+                Hello , {users[0].firstName} {users[0].lastName}
+              </h4>
+              <Link
+                onClick={() => {
+                  notify();
+                  setdetailsShow(false);
+                }}
+                to={authed ? "/account" : "/"}
+                className={styleSide}
+              >
+                Account
+              </Link>{" "}
               <Link onClick={notify} to="/" className={styleSide}>
                 <div>Home</div>
               </Link>
@@ -177,16 +197,16 @@ function Header() {
                   sign up
                 </Link>
               )}
-              <Link
+              <button
                 onClick={() => {
                   notify();
-                  setdetailsShow(false);
+                  setAuthed("");
+                  setShowSide(false);
                 }}
-                to={authed ? "/account" : "/"}
                 className={styleSide}
               >
-                Account
-              </Link>{" "}
+                Log out
+              </button>{" "}
               <SearchMob />
             </div>
             {showCateg && authed && (

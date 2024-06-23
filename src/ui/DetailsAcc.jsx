@@ -260,7 +260,7 @@ function DetailsAcc() {
           {...register("password", {
             required: getValues().newPassword ? true : false,
             maxLength: 15,
-            minLength: 8,
+            minLength: 6,
             pattern: /^[a-zA-Z0-9\s,'-.]*$/,
           })}
           className="placeholder:text-[10px] font-semibold sm:text-sm text-xs sm:placeholder:text-xs md:placeholder:text-sm sm:w-full w-9/12 md:h-10 sm:h-9 xs:h-8 h-7 bg-stone-100 rounded-[3px] outline-none p-3"
@@ -283,7 +283,7 @@ function DetailsAcc() {
           {...register("newPassword", {
             required: getValues().password !== "" ? true : false,
             maxLength: 15,
-            minLength: 8,
+            minLength: 6,
             pattern: /^[a-zA-Z0-9\s,'-.]*$/,
           })}
           name="newPassword"
@@ -310,7 +310,7 @@ function DetailsAcc() {
             // required: getValues().password !== "" ? true : false,
             required: getValues().password !== "" ? true : false,
             maxLength: 15,
-            minLength: 8,
+            minLength: 6,
             pattern: /^[a-zA-Z0-9\s,'-.]*$/,
             validate: (value) => value === getValues().newPassword,
           })}

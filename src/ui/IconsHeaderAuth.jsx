@@ -58,8 +58,7 @@ function IconsHeaderAuth() {
           <div className="lg:w-40 md:w-40 w-32 h-fit absolute right-0 top-[70px] text-stone-800 text-[12px]  text-center rounded-[3px] z-10 bg-transparent flex flex-col justify-between text-base font-semibold">
             <div className=" bg-stone-200/50 backdrop-blur-lg">
               <h4 className="text-sm my-2 text-stone-600">
-                {" "}
-                Hello , khaled sakr{" "}
+                Hello , {users[0].firstName} {users[0].lastName}
               </h4>
               <Link
                 onClick={() => {
