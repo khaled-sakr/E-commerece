@@ -83,7 +83,46 @@ t-empire/
 ├── README.md
 ├── .tailwind.config.js
 └── .vite.config.js 
-
+├── public/
+│ ├── index.html
+│ └── ...
+│
+├── src/
+│ ├── components/
+│ │ ├── ProductList.tsx
+│ │ ├── ShoppingCart.tsx
+│ │ ├── Authentication/
+│ │ │ ├── Login.tsx
+│ │ │ ├── Signup.tsx
+│ │ │ └── ...
+│ │ └── ...
+│ ├── pages/
+│ │ ├── Home.tsx
+│ │ ├── ProductDetails.tsx
+│ │ ├── Checkout.tsx
+│ │ ├── AdminDashboard/
+│ │ │ ├── ManageProducts.tsx
+│ │ │ ├── ManageOrders.tsx
+│ │ │ └── ...
+│ │ └── ...
+│ ├── redux/
+│ │ ├── actions/
+│ │ │ └── ...
+│ │ ├── reducers/
+│ │ │ └── ...
+│ │ ├── store.ts
+│ │ └── ...
+│ ├── styles/
+│ │ └── tailwind.css
+│ ├── firebase/
+│ │ └── firebaseConfig.js
+│ ├── App.tsx
+│ └── index.tsx
+│
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── README.md
 ### Screenshots
 ![Slide1](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20142949.png)
 ![Slide2](https://github.com/khaled-sakr/E-commerece/blob/v1/public/assets/Annotation%202024-06-23%20143035.png)
