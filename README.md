@@ -26,7 +26,8 @@ Currently, two official plugins are available:
 
   ## Folder Structure
 t-empire/
-`│
+```
+│
 ├── public/
 │   └── images ── ...
 ├── src/
@@ -82,7 +83,8 @@ t-empire/
 ├── .postcss.config.js
 ├── README.md
 ├── .tailwind.config.js
-└── .vite.config.js`
+└── .vite.config.js
+```
 
 ### Screenshots
 <div>
