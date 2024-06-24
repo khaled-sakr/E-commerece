@@ -25,8 +25,8 @@ Currently, two official plugins are available:
 - Tailwind CSS: Utility-first CSS framework for rapid styling without writing custom CSS
 
   ## Folder Structure
-t-empire/
 ```
+t-empire/
 │
 ├── public/
 │   └── images ── ...
