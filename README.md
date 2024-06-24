@@ -26,8 +26,63 @@ Currently, two official plugins are available:
 
   ## Folder Structure
 t-empire/
-... │ ├── public/ │ └── images ── ... ├── src/ │ └── pages/ │ │ ├── About.jsx │ │ ├── Account.jsx │ │ ├── Cart.jsx │ │ ├── Categories.jsx │ │ ├── Checkout.jsx │ │ ├── Confirm.jsx │ │ ├── Error.jsx │ │ ├── Favourite.jsx │ │ ├── Home.jsx │ │ ├── Login.tsx │ │ ├── Product.tsx │ │ └── Shop.jsx │ │ └── SignUp.jsx │ ├── ui/ │ │ ├── AboutUs.jsx │ │ ├── AdditionFet.jsx │ │ ├── AdressAcc.jsx │ │ ├── Applayout.jsx │ │ ├── CategoriesHome.jsx │ │ ├── CategoriesinShop.jsx │ │ ├── CatInShop.jsx │ │ ├── ContactUs.jsx │ │ ├── DetailAcc.jsx │ │ ├── ErrorForms.jsx │ │ ├── ExploreThisCat.jsx │ │ ├── Favor.jsx │ │ ├── FlashSales.jsx │ │ ├── Founder.jsx │ │ ├── Header.jsx │ │ ├── Favor.jsx │ │ └── etc │ ├── context/ │ │ └── ContextProject.jsx │ ├── features/ │ │ ├── cartSlice.ts │ │ ├── favSlice.ts │ │ ├── OutSlideClick.ts │ │ └── userSlice.ts │ │
-│ ├── App.jsx │ ├── index.css │ └── main.jsx │ └── store.jsx │ ├── .gitignore ├── .index.html ├── .package-lock.json ├── .package.json ├── .postcss.config.js ├── README.md ├── .tailwind.config.js └── .vite.config.js...
+│
+├── public/
+│   └── images ── ...
+├── src/
+│   └──  pages/
+│   │   ├── About.jsx
+│   │   ├── Account.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Categories.jsx
+│   │   ├── Checkout.jsx
+│   │   ├── Confirm.jsx
+│   │   ├── Error.jsx
+│   │   ├── Favourite.jsx
+│   │   ├── Home.jsx
+│   │   ├── Login.tsx
+│   │   ├── Product.tsx
+│   │   └── Shop.jsx
+│   │   └── SignUp.jsx
+│   ├── ui/
+│   │   ├── AboutUs.jsx
+│   │   ├── AdditionFet.jsx
+│   │   ├── AdressAcc.jsx
+│   │   ├── Applayout.jsx
+│   │   ├── CategoriesHome.jsx
+│   │   ├── CategoriesinShop.jsx
+│   │   ├── CatInShop.jsx
+│   │   ├── ContactUs.jsx
+│   │   ├── DetailAcc.jsx
+│   │   ├── ErrorForms.jsx
+│   │   ├── ExploreThisCat.jsx
+│   │   ├── Favor.jsx
+│   │   ├── FlashSales.jsx
+│   │   ├── Founder.jsx
+│   │   ├── Header.jsx
+│   │   ├── Favor.jsx
+│   │   └── etc
+│   ├── context/
+│   │   └──  ContextProject.jsx
+│   ├── features/
+│   │   ├── cartSlice.ts
+│   │   ├── favSlice.ts
+│   │   ├── OutSlideClick.ts
+│   │   └── userSlice.ts
+│   │     
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│   └── store.jsx
+│
+├── .gitignore
+├── .index.html
+├── .package-lock.json
+├── .package.json
+├── .postcss.config.js
+├── README.md
+├── .tailwind.config.js
+└── .vite.config.js
 
 ### Screenshots
 <div>
