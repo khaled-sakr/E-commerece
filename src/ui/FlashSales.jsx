@@ -98,7 +98,7 @@ function FlashSales() {
                         src={product.srcOne}
                         alt="palestine"
                         className="sm:h-40 sm:w-40 h-36 w-36 mx-auto rounded-md duration-500 overflow-hidden -mb-0 hover:-mb-[28px] "
-                      /> 
+                      />
                       <button className="hover:bg-stone-800  hover:absolute  bottom-0 block text-xs -translate-y-0 sm:w-40 w-36 m-auto h-7 ml-0 sm:ml-[8px] rounded-b-md text-white font-[300] bg-black overflow-hidden ">
                         Go To Product
                       </button>
@@ -117,7 +117,7 @@ function FlashSales() {
                             })
                           )
                         }
-                        className="absolute p-0 text-2xl rounded-md top-2 sm:right-4 right-2 text-center text-black font-[400] ml-8 bg-transparent"
+                        className="absolute p-0 text-2xl rounded-md top-2 sm:right-4 right-2 text-center text-black font-[400] ml-8 bg-transparent "
                       >
                         <IoMdHeart className="text-[#ED4444] " />
                       </button>
@@ -136,14 +136,14 @@ function FlashSales() {
                     <span className="block text-base text-start font-[500] ml-3 mb-1">
                       {product.name}
                     </span>
-                    <span className="text-red-400 text-sm font-[500] sm:ml-3 start">
+                    <span className="text-red-400 text-sm font-[500] sm:ml-3  ml-2  start">
                       $
                       {product.price - product.price * (product.discount / 100)}
                     </span>
                     <span className="line-through text-sm text-stone-400 ml-2 sm:ml-3 font-[400]">
                       ${product.price}
                     </span>
-                    <span className="flex text-yellow-500 sm:text-lg text-base mt-1 ">
+                    <span className="flex text-yellow-500 sm:text-lg sm:ml-2 ml-1 text-base mt-1 mx-auto text-center">
                       {Array.apply(null, { length: product.stars }).map((i) => (
                         <span className="busterCards" key={i}>
                           <IoMdStar />

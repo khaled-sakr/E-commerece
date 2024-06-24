@@ -111,13 +111,13 @@ function CategoriesInShop({ type, categoryId }) {
                       <span className="block text-base text-start font-[500] ml-3 mb-1">
                         {product.name}
                       </span>
-                      <span className="text-red-400 text-sm font-[500] ml-1 sm:ml-3 start">
+                      <span className="text-red-400 text-sm font-[500] ml-2 sm:ml-3 start">
                         $
                         {product.price -
                           product.price * (product.discount / 100)}
                       </span>
 
-                      <span className="flex text-yellow-500 sm:text-lg text-base mt-1 ">
+                      <span className="flex text-yellow-500 sm:text-lg sm:ml-2 ml-1 text-base mt-1 mx-auto text-center">
                         {Array.apply(null, { length: product.stars }).map(
                           (i) => (
                             <span className="busterCards" key={i}>

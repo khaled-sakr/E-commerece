@@ -62,7 +62,6 @@ const responsive = {
 };
 function CategoriesHome() {
   const { categories } = useConFast();
-  const [changeFav, setChangeFav] = useState(false);
   return (
     <>
       <div className="sm:w-9/12 w-full mx-auto h-full flex-col-reverse flex space-y-2">

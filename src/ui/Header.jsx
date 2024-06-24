@@ -161,7 +161,7 @@ function Header() {
               <Link
                 onClick={() => {
                   notify();
-                  setdetailsShow(false);
+                  setdetailsShow(true);
                 }}
                 to={authed ? "/account" : "/"}
                 className={styleSide}

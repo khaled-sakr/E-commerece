@@ -72,7 +72,7 @@ function Category({ withHint = true, anotherHint = false }) {
                   ${product.price - product.price * (product.discount / 100)}
                 </span>
 
-                <span className="flex text-yellow-500 text-xl ml-2 mt-1 ">
+                <span className="flex text-yellow-500 sm:text-lg sm:ml-2 ml-1 text-base mt-1 mx-auto text-center">
                   {Array.apply(null, { length: product.stars }).map((i) => (
                     <span className="busterCards" key={i}>
                       <IoMdStar />
@@ -86,7 +86,7 @@ function Category({ withHint = true, anotherHint = false }) {
                     ""
                   )}
 
-                  <span className="text-slate-400 text-sm ml-2">
+                  <span className="text-slate-400 text-sm ml-1">
                     ( {product.reviews} )
                   </span>
                 </span>

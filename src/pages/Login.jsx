@@ -48,9 +48,9 @@ function Login() {
   };
   const onSubmit = (data) => {
     if (data.email === users[0].email && data.password === users[0].password) {
+      window.scrollTo(0, 0);
       setAuthed(true);
       notifySuccess();
-      window.scrollTo(0, 0);
       reset();
     } else {
       setAuthed(false);
