@@ -25,8 +25,9 @@ Currently, two official plugins are available:
 - Tailwind CSS: Utility-first CSS framework for rapid styling without writing custom CSS
 
   ## Folder Structure
+```
 t-empire/
-... │
+│
 ├── public/
 │   └── images ── ...
 ├── src/
@@ -82,7 +83,8 @@ t-empire/
 ├── .postcss.config.js
 ├── README.md
 ├── .tailwind.config.js
-└── .vite.config.js ...
+└── .vite.config.js
+```
 
 ### Screenshots
 <div>
